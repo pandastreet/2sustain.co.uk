@@ -1,0 +1,157 @@
+body {
+	width: 1000px;
+}
+
+#header-con {
+	margin-bottom: 10px;
+}
+
+header {
+	margin-bottom: 0;
+}
+
+article {
+	margin-top: 8px;
+}
+
+.half {
+	width: 50%;
+	display: block;
+	float: left;
+}
+
+.half .caption h2:before {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	content: '';
+	margin-right: 3px;
+	margin-top: 5px;
+}
+
+.half#energy .caption h2:before {
+	background-color: #15b940;
+}
+
+.half#waste .caption h2:before {
+	background-color: #784d02;
+}
+
+.half#water .caption h2:before {
+	background-color: #1464ba;
+}
+
+.half#smart .caption h2:before {
+	background-color: #d8a717;
+}
+
+.half .inner {
+	position: relative;
+	height: 260px;
+	background-size: cover;
+	background-position: center center;
+}
+
+.caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 88px;
+	padding: 10px;
+	background-color: rgba(32,32,32,0.65);
+	color: #fff;
+}
+
+.caption h2, .caption p {
+	color: #fff;
+	margin: 0;
+}
+
+.caption h2 {
+	margin-bottom: 5px;
+}
+
+#london-pano {
+	position: relative;
+	background-image: url("/assets/images/london.jpg");
+	height: 322px;
+	width: 100%;
+}
+
+#london-pano .anno-con {
+	position: absolute;
+}
+
+#london-pano .anno-con .anno .text {
+	background-color: rgba(32,32,32,0.65);
+	padding: 10px;
+	color: #fff;
+	display: none;
+	max-width: 260px;
+	text-align: center;
+}
+
+#pano-bar {
+	height: 20px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+#pano-bar ul {
+	height: 20px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+}
+
+#pano-bar li {
+	padding: 0 2px;
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+#pano-bar li.selected {
+	padding: 0 2px;
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#pano-bar li:before {
+	width: 15px;
+	height: 15px;
+	background-color: #000;
+	content: '';
+	display: inline-block;
+	transition: width 0.1s, height 0.1s;
+}
+
+#pano-bar li:hover:before {
+	width: 20px;
+	height: 20px;
+}
+
+#pano-bar li.selected:before {
+	width: 20px;
+	height: 20px;
+}
+
+#pano-bar li.green:before {
+	background-color: #15b940;
+}
+
+#pano-bar li.blue:before {
+	background-color: #1464ba;
+}
+
+#pano-bar li.orange:before {
+	background-color: #d8a717;
+}
+
+#pano-bar li.brown:before {
+	background-color: #784d02;
+}

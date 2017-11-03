@@ -1,0 +1,9 @@
+ul.tick li {
+	list-style: none;
+	margin: 0;
+}
+
+ul.tick li:before {
+	content: "\2714";
+	margin: 0 1em;
+}

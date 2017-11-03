@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>2Sustain - Search</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Business performance improvement consulting for asset intensive industries, using sustainable thinking, the 2Sustain&trade; value tower, and smart asset optimization to drive success." />
+    <meta name="keywords" content="2Sustain, smart grid, smart utility, business performance improvement, water, waste, energy, internet of things, asset management, asset optimization, dorking, surrey, london" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    google.load("feeds", "1");
+
+    function initialize() {
+      var feed = new google.feeds.Feed('http://news.google.co.uk/news?q="smart+utility"+OR+"smart+infrastructure"+OR+"smart+analytics"+OR+"business+analytics"+OR+"big+data"+OR+"smart+grid"+OR+"smart+metering"+OR+"internet+of+things"+OR+"sustainable+cities"+OR+"smart+cities"+OR+"utility+asset+management"+OR+"intelligent+energy+generation"&oq="smart+utility"+OR+"smart+infrastructure"+OR+"smart+analytics"+OR+"business+analytics"+OR+"big+data"+OR+"smart+grid"+OR+"smart+metering"+OR+"internet+of+things"+OR+"sustainable+cities"+OR+"smart+cities"+OR+"utility+asset+management"+OR+"intelligent+energy+generation”&output=rss');
+      feed.setNumEntries(10);
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("feed");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            $('#feed').append('<article id="item-' + i + '"><a href="' + entry.link + '" style="display: block;"><div class="image" style="display: inline; float: right;"></div><h2 style="display: inline;">' + entry.title + '</h2></a><p>' + $(entry.content).find('font:eq(2)').find('font:eq(2)').text() + '</p></article>');
+            $('#feed').find('#item-' + i + ' .image').append($(entry.content).find('img').css('border', 'none'));
+          }
+        }
+      });
+    }
+
+    google.setOnLoadCallback(initialize);
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <header>
+        <div id="header-con">
+          <a href="/"><img src="/assets/images/logo.png" alt="2Sustain" /></a>
+          <form class="search" action="/search">
+            <input value="006023128175822550946:w0mo4r74-uo" name="cx" type="hidden"/><input value="FORID:11" name="cof" type="hidden"/><input id="q" name="q" type="text"/>
+          </form>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/what-we-do">What We Do</a></li>
+            <li class="active"><a class="active" href="/news">News</a></li>
+            <li><a href="/clients">Clients</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/read-this">Links</a></li>
+            <li><a href="/careers">Careers</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="header-placeholder"></div>
+      <section class="content blog">
+        <div id="feed"></div>
+      </section>
+      <div class="clear"></div>
+      <footer>
+        <div id="left">
+          <p>Copyright © 2014, 2 Sustain Consulting Limited, All rights reserved. <a href="/about-us/terms-of-use">Terms of Use</a></p>
+        </div>
+        <div id="right">
+          <p><span>Email: <a href="mailto:enquiries@2sustain.co.uk">enquiries@2sustain.co.uk</a></span></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
